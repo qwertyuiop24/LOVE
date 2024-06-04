@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf5e6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to bottom right, #ff9a9e, #fecfef);
+        }
+        .letter-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 800px;
+            border: 2px solid #ff6f61;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #ff6f61;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .message {
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #333;
+            font-family: 'Dancing Script', cursive;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ff6f61;
+        }
+        .heart {
+            color: red;
+            font-size: 1.5em;
+        }
+        .surprise-message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .surprise-message img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: block; /* Ensure the image is displayed */
+            margin: 0 auto; /* Center the image */
+            transition: opacity 0.5s ease;
+        }
+        .surprise-message img:not(:first-child) {
+            display: none; /* Hide all images except the first one */
+        }
+        /* Fade in effect */
+        .surprise-message img.fade-in {
+            opacity: 1;
+        }
+        /* Slideshow animation */
+        @keyframes slideshow {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        /* Apply slideshow animation to images */
+        .surprise-message img {
+            animation: slideshow 10s ease infinite; /* Change slide every 10 seconds */
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container">
+        <div class="content">
+            <div class="header">
+                <h1>Dear [Her Name],</h1>
+            </div>
+            <div class="message">
+                <p>Happy Monthsary, my love! ❤️</p>
+                <p>As I sit here thinking about you, I am overwhelmed with gratitude and love. Even though we are miles apart, you are always close to my heart. Your love and support mean everything to me, and I am so thankful to have you in my life.</p>
+                <p>Every day, I am reminded of how lucky I am to have found someone as amazing as you. You bring so much joy, light, and love into my life, and I can’t imagine my world without you. The distance between us is just a temporary challenge, and I know we will come out stronger and closer because of it.</p>
+                <p>I cherish all the memories we have created together, and I look forward to making many more in the future. Thank you for being my partner, my best friend, and my love. You are my everything, and I can't wait to spend many more months and years celebrating our love.</p>
+                <p>Until we can be together again, know that I am always thinking of you and loving you with all my heart.</p>
+                <p>Yours forever,</p>
+                <p>[Your Name] <span class="heart">❤️</span></p>
+            </div>
+        </div>
+        <div class="surprise-message" id="surpriseMessage">
+            <p>Surprise! Here's a slideshow of our memories together. Can't wait to create more with you!</p>
+            <img src="img/image1.jpg" alt="Image 1">
+            <img src="img/image2.jpg" alt="Image 2">
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</body>
+</html>
